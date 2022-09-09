@@ -74,6 +74,10 @@ body {
   margin-top: 20px;
 }
 
+.counting-flex {
+  width: 12px;
+}
+
 .counting-flex ol {
   list-style-type: none;
   font-size: 9px;
