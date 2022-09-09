@@ -8,6 +8,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --childhood-color: #eab308;
+  --adolescence-color: #ea580c;
+  --early-adulthood-color: #e879f9;
+  --middle-adulthood-color: #9333ea;
+  --mature-adulthood-color: #38bdf8;
+  --late-adulthood-color: #22c55e;
+}
+
 img {
   max-width: 100%;
 }
@@ -72,19 +81,25 @@ body {
   align-items: flex-end;
 }
 
+.lifestage-label {
+  writing-mode: vertical-rl;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.childhood-label {
+  color: #eab308;
+}
+
 #childhood-container {
   grid-template-rows: repeat(12, 1fr);
-  /* margin-top: 10px; */
 }
 
 #adolescence-container {
   grid-template-rows: repeat(7, 1fr);
 }
 
-#early-adulthood-container {
-  grid-template-rows: repeat(15, 1fr);
-}
-
+#early-adulthood-container,
 #middle-adulthood-container {
   grid-template-rows: repeat(15, 1fr);
 }
@@ -105,7 +120,7 @@ body {
 }
 
 .childhood {
-  border-color: #eab308;
+  border-color: var(--childhood-color);
 }
 
 .adolescence {
