@@ -19,7 +19,7 @@ function childhoodBubbles() {
   for (let i = 0; i < 52; i++) {
     for (let j = 0; j < 12; j++) {
       const bubble = document.createElement('div');
-      bubble.classList.add('childhood-bubble');
+      bubble.classList.add('childhood', 'bubble');
       childhoodContainer.append(bubble);
     }
   }
@@ -29,7 +29,7 @@ function adolescenceBubbles() {
   for (let i = 0; i < 52; i++) {
     for (let j = 0; j < 7; j++) {
       const bubble = document.createElement('div');
-      bubble.classList.add('adolescence-bubble');
+      bubble.classList.add('adolescence', 'bubble');
       adolescenceContainer.append(bubble);
     }
   }

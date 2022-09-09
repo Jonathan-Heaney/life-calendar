@@ -54,6 +54,7 @@ body {
   grid-template-columns: repeat(52, 1fr);
   grid-template-rows: repeat(12, 1fr);
   gap: 1px;
+  margin-top: 10px;
   margin-bottom: 1px;
 }
 
@@ -92,16 +93,16 @@ body {
   gap: 1px;
 }
 
-.childhood-bubble {
+.bubble {
   border-radius: 50%;
-  border: 1px solid blue;
   width: 11px;
   height: 11px;
 }
 
-.adolescence-bubble {
-  border-radius: 50%;
-  border: 1px solid red;
-  width: 11px;
-  height: 11px;
+.childhood {
+  border: 1px solid #eab308;
+}
+
+.adolescence {
+  border: 1px solid #ea580c;
 }
