@@ -97,17 +97,22 @@ body {
 }
 
 .early-adulthood {
-  border-color: #db2777;
+  border-color: #e879f9;
 }
 
 .middle-adulthood {
-  border-color: #a21caf;
+  border-color: #9333ea;
 }
 
 .mature-adulthood {
-  border-color: #2563eb;
+  border-color: #38bdf8;
 }
 
 .late-adulthood {
-  border-color: #166534;
+  border-color: #22c55e;
+}
+
+.late-adulthood:last-of-type {
+  background-color: black;
+  border: 1px solid black;
 }
