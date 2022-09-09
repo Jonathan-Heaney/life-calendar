@@ -49,48 +49,36 @@ body {
   margin-left: -11px;
 }
 
-#childhood-container {
+.bubble-container {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
-  grid-template-rows: repeat(12, 1fr);
   gap: 1px;
-  margin-top: 10px;
   margin-bottom: 1px;
 }
 
+#childhood-container {
+  grid-template-rows: repeat(12, 1fr);
+  margin-top: 10px;
+}
+
 #adolescence-container {
-  display: grid;
-  grid-template-columns: repeat(52, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  gap: 1px;
 }
 
 #early-adulthood-container {
-  display: grid;
-  grid-template-columns: repeat(52, 1fr);
   grid-template-rows: repeat(15, 1fr);
-  gap: 1px;
 }
 
 #middle-adulthood-container {
-  display: grid;
-  grid-template-columns: repeat(52, 1fr);
   grid-template-rows: repeat(15, 1fr);
-  gap: 1px;
 }
 
 #mature-adulthood-container {
-  display: grid;
-  grid-template-columns: repeat(52, 1fr);
   grid-template-rows: repeat(30, 1fr);
-  gap: 1px;
 }
 
 #late-adulthood-container {
-  display: grid;
-  grid-template-columns: repeat(52, 1fr);
   grid-template-rows: repeat(21, 1fr);
-  gap: 1px;
 }
 
 .bubble {
@@ -105,4 +93,8 @@ body {
 
 .adolescence {
   border: 1px solid #ea580c;
+}
+
+.early-adulthood {
+  border: 1px solid #db2777;
 }
