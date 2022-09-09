@@ -49,16 +49,59 @@ body {
   margin-left: -11px;
 }
 
-#bubble-container {
+#childhood-container {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
-  grid-template-rows: repeat(100, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 1px;
+  margin-bottom: 1px;
+}
+
+#adolescence-container {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   gap: 1px;
 }
 
-.bubble {
+#early-adulthood-container {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  gap: 1px;
+}
+
+#middle-adulthood-container {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  gap: 1px;
+}
+
+#mature-adulthood-container {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  gap: 1px;
+}
+
+#late-adulthood-container {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+  gap: 1px;
+}
+
+.childhood-bubble {
   border-radius: 50%;
   border: 1px solid blue;
+  width: 11px;
+  height: 11px;
+}
+
+.adolescence-bubble {
+  border-radius: 50%;
+  border: 1px solid red;
   width: 11px;
   height: 11px;
 }
