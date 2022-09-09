@@ -47,6 +47,7 @@ body {
 }
 
 .top-label {
+  padding-left: 20px;
   align-self: flex-start;
   margin-top: 30px;
   display: flex;
@@ -71,7 +72,7 @@ body {
 }
 
 .childhood-flex {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .counting-flex {
