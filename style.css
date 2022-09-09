@@ -37,10 +37,6 @@ body {
   padding: 24px;
 }
 
-/* .main-container {
-  /* border: 2px solid green; 
-} */
-
 .container h1 {
   font-size: 3rem;
   font-family: 'Open Sans', sans-serif;
@@ -75,10 +71,6 @@ body {
   margin-top: 10px;
   margin-left: 5px;
 }
-/* 
-.content {
-  border: 2px solid yellow;
-} */
 
 .bubble-container {
   display: grid;
