@@ -48,3 +48,17 @@ body {
 .arrow {
   margin-left: -11px;
 }
+
+#bubble-container {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+  gap: 1px;
+}
+
+.bubble {
+  border-radius: 50%;
+  border: 1px solid blue;
+  width: 11px;
+  height: 11px;
+}
