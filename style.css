@@ -65,9 +65,12 @@ body {
   margin-bottom: 1px;
 }
 
-.childhood-flex {
+.flex-container {
   display: flex;
   gap: 8px;
+}
+
+.childhood-flex {
   margin-top: 20px;
 }
 
@@ -83,12 +86,32 @@ body {
 
 .lifestage-label {
   writing-mode: vertical-rl;
-  font-size: 9px;
+  font-size: 6px;
   font-weight: bold;
 }
 
 .childhood-label {
-  color: #eab308;
+  color: var(--childhood-color);
+}
+
+.adolescence-label {
+  color: var(--adolescence-color);
+}
+
+.early-adulthood-label {
+  color: var(--early-adulthood-color);
+}
+
+.middle-adulthood-label {
+  color: var(--middle-adulthood-color);
+}
+
+.mature-adulthood-label {
+  color: var(--mature-adulthood-color);
+}
+
+.late-adulthood-label {
+  color: var(--late-adulthood-color);
 }
 
 #childhood-container {
@@ -124,23 +147,23 @@ body {
 }
 
 .adolescence {
-  border-color: #ea580c;
+  border-color: var(--adolescence-color);
 }
 
 .early-adulthood {
-  border-color: #e879f9;
+  border-color: var(--early-adulthood-color);
 }
 
 .middle-adulthood {
-  border-color: #9333ea;
+  border-color: var(--middle-adulthood-color);
 }
 
 .mature-adulthood {
-  border-color: #38bdf8;
+  border-color: var(--mature-adulthood-color);
 }
 
 .late-adulthood {
-  border-color: #22c55e;
+  border-color: var(--late-adulthood-color);
 }
 
 .late-adulthood:last-of-type {
