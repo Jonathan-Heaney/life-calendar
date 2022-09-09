@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;700;900&family=Open+Sans:wght@800&display=swap');
 
 *,
 *::after,
@@ -21,20 +21,20 @@ body {
   max-width: 700px; */
   width: fit-content;
   margin: 0 auto;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   text-align: center;
   display: flex;
   flex-direction: column;
   padding: 24px;
 }
 
-.main-container {
-  border: 2px solid green;
-}
+/* .main-container {
+  /* border: 2px solid green; 
+} */
 
 .container h1 {
   font-size: 3rem;
-  font-weight: 900;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .top-label {
@@ -85,16 +85,29 @@ body {
   border-radius: 50%;
   width: 11px;
   height: 11px;
+  border: 1px solid;
 }
 
 .childhood {
-  border: 1px solid #eab308;
+  border-color: #eab308;
 }
 
 .adolescence {
-  border: 1px solid #ea580c;
+  border-color: #ea580c;
 }
 
 .early-adulthood {
-  border: 1px solid #db2777;
+  border-color: #db2777;
+}
+
+.middle-adulthood {
+  border-color: #a21caf;
+}
+
+.mature-adulthood {
+  border-color: #2563eb;
+}
+
+.late-adulthood {
+  border-color: #166534;
 }
