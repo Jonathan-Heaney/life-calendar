@@ -17,10 +17,21 @@ const lateAdulthoodContainer = document.querySelector(
 
 const bubbles = document.querySelectorAll('.bubble');
 
+function addTooltip() {
+  const tooltipText = document.createElement('span');
+  tooltipText.classList.add('tooltiptext');
+  bubble.appendChild(tooltipText);
+  tooltipText.innerText = `Week ${i + 1}`;
+}
+
 function childhoodBubbles() {
   for (let i = 0; i < 52 * 12; i++) {
     const bubble = document.createElement('div');
-    bubble.classList.add('childhood', 'bubble');
+    bubble.classList.add('childhood', 'bubble', 'tooltip');
+    const tooltipText = document.createElement('span');
+    tooltipText.classList.add('tooltiptext');
+    bubble.appendChild(tooltipText);
+    tooltipText.innerText = `Week ${i + 1}`;
     bubble.setAttribute('id', `${i + 1}`);
     childhoodContainer.append(bubble);
   }
@@ -106,6 +117,7 @@ function fillBubbles() {
     const filledBubbles = document.getElementById(`${i}`);
     if (i > 4108) {
       filledBubbles.style.backgroundColor = '#22c55e';
+      filledBubbles.style.opacity = 0.8;
     } else if (i > 2548) {
       filledBubbles.style.backgroundColor = '#38bdf8';
     } else if (i > 1768) {
@@ -115,7 +127,14 @@ function fillBubbles() {
     } else if (i > 624) {
       filledBubbles.style.backgroundColor = '#ea580c';
     } else {
-      filledBubbles.style.backgroundColor = '#eab308';
+      filledBubbles.style.backgroundColor = 'rgba(234, 179, 8, .5)';
+      filledBubbles.onmouseover = function () {
+        this.style.backgroundColor = 'rgba(234, 179, 8, .9)';
+        this.style.cursor = 'pointer';
+      };
+      filledBubbles.onmouseleave = function () {
+        this.style.backgroundColor = 'rgba(234, 179, 8, .5)';
+      };
     }
   }
 }
