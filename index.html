@@ -16,6 +16,19 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="form-container">
+      <form action="#">
+        <label for="birthdate">What is your date of birth?</label>
+        <input
+          type="date"
+          name="birthdate"
+          id="birthdate"
+          min="1923-01-01"
+          max="2022-09-11"
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
     <div class="container">
       <div class="main-container">
         <h1>CALENDAR OF YOUR LIFE</h1>
@@ -220,5 +233,6 @@
         </div>
       </div>
     </div>
+    <div class="empty-grid"></div>
   </body>
 </html>
