@@ -69,3 +69,22 @@ earlyAdulthoodBubbles();
 middleAdulthoodBubbles();
 matureAdulthoodBubbles();
 lateAdulthoodBubbles();
+
+function getBirthdate() {
+  let birthdate = document.getElementById('birthdate').value;
+}
+
+const milliInADay = 1000 * 60 * 60 * 24;
+
+function getAge() {
+  let birthdate = new Date(document.getElementById('birthdate').value);
+  let today = new Date().getTime();
+  let age = today - birthdate.getTime();
+  let days = Math.floor(age / milliInADay);
+  let weeks = Math.floor(days / 7);
+  if (age < 0) {
+    alert('Enter a real birthday!');
+  } else {
+    console.log(birthdate, today, age, days, weeks);
+  }
+}
