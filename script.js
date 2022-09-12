@@ -40,7 +40,11 @@ function childhoodBubbles() {
 function adolescenceBubbles() {
   for (let i = 0; i < 52 * 7; i++) {
     const bubble = document.createElement('div');
-    bubble.classList.add('adolescence', 'bubble');
+    bubble.classList.add('adolescence', 'bubble', 'tooltip');
+    const tooltipText = document.createElement('span');
+    tooltipText.classList.add('tooltiptext');
+    bubble.appendChild(tooltipText);
+    tooltipText.innerText = `Week ${i + 625}`;
     bubble.setAttribute('id', `${i + 625}`);
     adolescenceContainer.append(bubble);
   }
@@ -49,7 +53,11 @@ function adolescenceBubbles() {
 function earlyAdulthoodBubbles() {
   for (let i = 0; i < 52 * 15; i++) {
     const bubble = document.createElement('div');
-    bubble.classList.add('early-adulthood', 'bubble');
+    bubble.classList.add('early-adulthood', 'bubble', 'tooltip');
+    const tooltipText = document.createElement('span');
+    tooltipText.classList.add('tooltiptext');
+    bubble.appendChild(tooltipText);
+    tooltipText.innerText = `Week ${i + 989}`;
     bubble.setAttribute('id', `${i + 989}`);
     earlyAdulthoodContainer.append(bubble);
   }
@@ -58,7 +66,11 @@ function earlyAdulthoodBubbles() {
 function middleAdulthoodBubbles() {
   for (let i = 0; i < 52 * 15; i++) {
     const bubble = document.createElement('div');
-    bubble.classList.add('middle-adulthood', 'bubble');
+    bubble.classList.add('middle-adulthood', 'bubble', 'tooltip');
+    const tooltipText = document.createElement('span');
+    tooltipText.classList.add('tooltiptext');
+    bubble.appendChild(tooltipText);
+    tooltipText.innerText = `Week ${i + 1769}`;
     bubble.setAttribute('id', `${i + 1769}`);
     middleAdulthoodContainer.append(bubble);
   }
@@ -67,7 +79,11 @@ function middleAdulthoodBubbles() {
 function matureAdulthoodBubbles() {
   for (let i = 0; i < 52 * 30; i++) {
     const bubble = document.createElement('div');
-    bubble.classList.add('mature-adulthood', 'bubble');
+    bubble.classList.add('mature-adulthood', 'bubble', 'tooltip');
+    const tooltipText = document.createElement('span');
+    tooltipText.classList.add('tooltiptext');
+    bubble.appendChild(tooltipText);
+    tooltipText.innerText = `Week ${i + 2549}`;
     bubble.setAttribute('id', `${i + 2549}`);
     matureAdulthoodContainer.append(bubble);
   }
@@ -76,7 +92,11 @@ function matureAdulthoodBubbles() {
 function lateAdulthoodBubbles() {
   for (let i = 0; i < 52 * 21; i++) {
     const bubble = document.createElement('div');
-    bubble.classList.add('late-adulthood', 'bubble');
+    bubble.classList.add('late-adulthood', 'bubble', 'tooltip');
+    const tooltipText = document.createElement('span');
+    tooltipText.classList.add('tooltiptext');
+    bubble.appendChild(tooltipText);
+    tooltipText.innerText = `Week ${i + 4109}`;
     bubble.setAttribute('id', `${i + 4109}`);
     lateAdulthoodContainer.append(bubble);
   }
@@ -116,21 +136,49 @@ function fillBubbles() {
   for (let i = 1; i < weeks; i++) {
     const filledBubbles = document.getElementById(`${i}`);
     if (i > 4108) {
-      filledBubbles.style.backgroundColor = '#22c55e';
-      filledBubbles.style.opacity = 0.8;
+      filledBubbles.style.backgroundColor = 'rgba(34, 197, 94, .5)';
+      filledBubbles.onmouseover = function () {
+        this.style.backgroundColor = 'rgba(34, 197, 94, 1)';
+      };
+      filledBubbles.onmouseleave = function () {
+        this.style.backgroundColor = 'rgba(34, 197, 94, .5)';
+      };
     } else if (i > 2548) {
-      filledBubbles.style.backgroundColor = '#38bdf8';
+      filledBubbles.style.backgroundColor = 'rgba(56, 189, 248, .5)';
+      filledBubbles.onmouseover = function () {
+        this.style.backgroundColor = 'rgba(56, 189, 248, 1)';
+      };
+      filledBubbles.onmouseleave = function () {
+        this.style.backgroundColor = 'rgba(56, 189, 248, .5)';
+      };
     } else if (i > 1768) {
-      filledBubbles.style.backgroundColor = '#9333ea';
+      filledBubbles.style.backgroundColor = 'rgba(147, 51, 234, .5)';
+      filledBubbles.onmouseover = function () {
+        this.style.backgroundColor = 'rgba(147, 51, 234, 1)';
+      };
+      filledBubbles.onmouseleave = function () {
+        this.style.backgroundColor = 'rgba(147, 51, 234, .5)';
+      };
     } else if (i > 988) {
-      filledBubbles.style.backgroundColor = '#e879f9';
+      filledBubbles.style.backgroundColor = 'rgba(232, 121, 249, .5)';
+      filledBubbles.onmouseover = function () {
+        this.style.backgroundColor = 'rgba(232, 121, 249, 1)';
+      };
+      filledBubbles.onmouseleave = function () {
+        this.style.backgroundColor = 'rgba(232, 121, 249, .5)';
+      };
     } else if (i > 624) {
-      filledBubbles.style.backgroundColor = '#ea580c';
+      filledBubbles.style.backgroundColor = 'rgba(234, 88, 12, .5)';
+      filledBubbles.onmouseover = function () {
+        this.style.backgroundColor = 'rgba(234, 88, 12, 1)';
+      };
+      filledBubbles.onmouseleave = function () {
+        this.style.backgroundColor = 'rgba(234, 88, 12, .5)';
+      };
     } else {
       filledBubbles.style.backgroundColor = 'rgba(234, 179, 8, .5)';
       filledBubbles.onmouseover = function () {
-        this.style.backgroundColor = 'rgba(234, 179, 8, .9)';
-        this.style.cursor = 'pointer';
+        this.style.backgroundColor = 'rgba(234, 179, 8, 1)';
       };
       filledBubbles.onmouseleave = function () {
         this.style.backgroundColor = 'rgba(234, 179, 8, .5)';

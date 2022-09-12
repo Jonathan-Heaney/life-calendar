@@ -202,10 +202,10 @@ form button:active {
   height: 11px;
   border: 1px solid;
 }
-
+/* 
 .bubble:hover {
   cursor: pointer;
-}
+} */
 
 .childhood {
   border-color: var(--childhood-color);
@@ -233,7 +233,7 @@ form button:active {
 }
 
 .late-adulthood:last-of-type {
-  background-color: black;
+  background-color: black !important;
   border: 1px solid black;
 }
 
