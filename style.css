@@ -87,7 +87,8 @@ body {
   margin-top: 160px;
 }
 
-form button {
+form button,
+#reset {
   padding: 0.5rem 1rem;
   outline: none;
   background-color: var(--mature-adulthood-color);
@@ -111,6 +112,10 @@ form button:disabled {
   margin-bottom: 900px;
   visibility: hidden;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
 .side-label {
