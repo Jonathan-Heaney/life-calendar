@@ -103,6 +103,16 @@ form button:active {
   cursor: grabbing;
 }
 
+form button:disabled {
+  cursor: not-allowed;
+}
+
+.results {
+  margin-bottom: 900px;
+  visibility: hidden;
+  padding: 50px;
+}
+
 .side-label {
   display: flex;
   align-items: flex-start;
@@ -202,10 +212,6 @@ form button:active {
   height: 11px;
   border: 1px solid;
 }
-/* 
-.bubble:hover {
-  cursor: pointer;
-} */
 
 .childhood {
   border-color: var(--childhood-color);
@@ -239,7 +245,6 @@ form button:active {
 
 .tooltip {
   position: relative;
-  /* display: inline-block; */
 }
 
 .tooltip .tooltiptext {

@@ -14,15 +14,13 @@ const matureAdulthoodContainer = document.querySelector(
 const lateAdulthoodContainer = document.querySelector(
   '#late-adulthood-container'
 );
+const dateInput = document.querySelector('#birthdate');
+const results = document.querySelector('.results');
+const resultsText = document.querySelector('.results-text');
+const submitButton = document.querySelector('#submit');
+const resetButton = document.querySelector('#reset');
 
 const bubbles = document.querySelectorAll('.bubble');
-
-function addTooltip() {
-  const tooltipText = document.createElement('span');
-  tooltipText.classList.add('tooltiptext');
-  bubble.appendChild(tooltipText);
-  tooltipText.innerText = `Week ${i + 1}`;
-}
 
 function childhoodBubbles() {
   for (let i = 0; i < 52 * 12; i++) {
@@ -109,32 +107,45 @@ middleAdulthoodBubbles();
 matureAdulthoodBubbles();
 lateAdulthoodBubbles();
 
-console.log(bubbles);
-
-function getBirthdate() {
-  let birthdate = document.getElementById('birthdate').value;
-}
-
 const milliInADay = 1000 * 60 * 60 * 24;
 let weeks;
+let birthdate, today, age, days;
 
 function getAge() {
-  let birthdate = new Date(document.getElementById('birthdate').value);
-  let today = new Date().getTime();
-  let age = today - birthdate.getTime();
-  let days = Math.floor(age / milliInADay);
+  birthdate = new Date(document.getElementById('birthdate').value);
+  today = new Date().getTime();
+  age = today - birthdate.getTime();
+  days = Math.floor(age / milliInADay);
   weeks = Math.floor(days / 7);
   if (age < 0) {
     alert('Enter a real birthday!');
   } else {
-    console.log(birthdate, today, age, days, weeks);
+    resultsText.innerText = `You are ${weeks} weeks old (${days} days).`;
+    results.style.visibility = 'visible';
+    submitButton.disabled = true;
   }
 }
+
+resetButton.addEventListener('click', reset);
+
+function reset() {
+  birthdate = null;
+  today = null;
+  age = null;
+  days = null;
+  weeks = null;
+  dateInput.value = '';
+  results.style.visibility = 'hidden';
+  submitButton.disabled = false;
+  removeBubbles();
+}
+
+let filledBubbles;
 
 function fillBubbles() {
   getAge();
   for (let i = 1; i < weeks; i++) {
-    const filledBubbles = document.getElementById(`${i}`);
+    filledBubbles = document.getElementById(`${i}`);
     if (i > 4108) {
       filledBubbles.style.backgroundColor = 'rgba(34, 197, 94, .5)';
       filledBubbles.onmouseover = function () {
@@ -184,5 +195,14 @@ function fillBubbles() {
         this.style.backgroundColor = 'rgba(234, 179, 8, .5)';
       };
     }
+  }
+}
+
+function removeBubbles() {
+  for (let i = 1; i < 5200; i++) {
+    filledBubbles = document.getElementById(`${i}`);
+    filledBubbles.style.backgroundColor = 'white';
+    filledBubbles.onmouseover = 'white';
+    filledBubbles.onmouseleave = 'white';
   }
 }
